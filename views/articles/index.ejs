@@ -19,9 +19,14 @@
             <%= article.createdAt.toLocaleDateString() %>
           </div>
           <div class="card-text"><%= article.description %></div>
+          <a href="articles/<%= article.slug %>">Read More</a>
+          <!-- delete 경우 anchor 태그시 구글 크롤링하는 경우 봇이 삭제해버림-->
+          <form action="/articles/<%= article.id %>?_method=DELETE" method="POST">
+            <button type="submit">Delete</button>
+          </form>
         </div>
       </div>
     <% }) %>
   </div>
 </body>
-</html>
+</html>  
