@@ -9,6 +9,10 @@ NoSQL 데이터베이스인 MongoDB와 Express를 이용한 백엔드 개발 프
 ```
 git clone https://github.com/leedhfsd/markdown-blog.git
 ```
+패키지 설치
+```
+npm i
+```
 
 # 실행
 
