@@ -5,28 +5,38 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Markdown Blog</title>
+  <link href="/css/style.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-  <div class="contiainer">
-    <h1>Blog Articles</h1>
-    <a href="/articles/new">New Article</a>
-    
-    <% articles.forEach(article => { %>
-      <div class="card">
-        <div class="card-body">
-          <h4 class="card-title"><%= article.title %></h4>
-          <div class="card-subtitle">
-            <%= article.createdAt.toLocaleDateString() %>
+  <div class="container">
+    <div class="flex_row flex_between">
+      <h1>블로그</h1>
+      <a class="a_write btn_write" href="/articles/new">새 글 작성</a>
+    </div>
+    <div class="flex_row">
+      <% articles.forEach(article => { %>
+        <div class="item">
+          <div>
+            <h4 class="ellipsis mx_8"><%= article.title %></h4>
+            <div class="date">
+              <%= article.createdAt.toLocaleDateString() %>
+            </div>
           </div>
-          <div class="card-text"><%= article.description %></div>
-          <a href="articles/<%= article.slug %>">Read More</a>
-          <!-- delete 경우 anchor 태그시 구글 크롤링하는 경우 봇이 삭제해버림-->
-          <form action="/articles/<%= article.id %>?_method=DELETE" method="POST">
-            <button type="submit">Delete</button>
-          </form>
+          <div class="ellipsis mx_8">
+            <%= article.description %>
+          </div>
+          <div class="ellipsis mx_8">
+            <%- article.sanitizedHtml %>
+          </div>
+          <div class="flex_row mx_8">
+            <a class="btn btn_blue" href="articles/<%= article.slug %>">Read More</a>
+            <form class="" action="/articles/<%= article.id %>?_method=DELETE" method="POST">
+              <button class="btn btn_red" type="submit">Delete</button>
+            </form>
+          </div>
         </div>
-      </div>
-    <% }) %>
+      <% }) %>
+    </div>
   </div>
 </body>
 </html>  

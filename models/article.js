@@ -14,8 +14,7 @@ const articleSchema = new mongoose.Schema({
     type: String
   },
   markdown: {
-    type: String,
-    required: true
+    type: String
   },
   createdAt: {
     type: Date,
@@ -27,14 +26,13 @@ const articleSchema = new mongoose.Schema({
     unique: true
   },
   sanitizedHtml: {
-    type: String,
-    required: true
+    type: String
   }
 });
 
 articleSchema.pre('validate', function(next) {
   if (this.title) {
-    this.slug = slugify(this.title, { lower: true, strict: true });
+    this.slug = slugify(this.title, {lower: true, trim: true, locale: 'ko'});
   }
 
   if (this.markdown) {

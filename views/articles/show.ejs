@@ -4,19 +4,26 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
+  <link href="/css/style.css" type="text/css" rel="stylesheet">
+  <title>본문</title>
 </head>
 <body>
-  <div class="contiainer">
-    <h1 class=""><%= article.title %></h1>
-    <div><%= article.createdAt.toLocaleDateString() %></div>
-    <a href="/">All Articles</a>
-    <a href="/articles/edit/<%= article.id %>">Edit</a>
+  <div class="flex_col flex_between" style="height: 95vh; margin-top: 18px; margin-bottom: 18px;">
     <div>
+      <h1 class=""><%= article.title %></h1>
+      <div class="date">
+        <%= article.createdAt.toLocaleDateString() %>
+      </div>
+    </div>
+    <div class="text" style="text-align: center;">
       <%= article.description %>
     </div>
-    <div>
+    <div class="text" style="text-align: center;">
       <%- article.sanitizedHtml %>
+    </div>
+    <div class="flex_row" style="justify-content: right;">
+      <a class="btn btn_blue" href="/">홈</a>
+      <a class="btn btn_green" href="/articles/edit/<%= article.id %>">수정하기</a>
     </div>
   </div>
 </body>

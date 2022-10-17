@@ -1,0 +1,182 @@
+@font-face {
+  font-family: 'NotoSansKR';
+  src: url("./../fonts/NotoSansKR-Regular.otf") 
+}
+
+@font-face {
+  font-family: 'Jua';
+  src: url("./../fonts/BMJUA_ttf.ttf") 
+}
+
+@font-face {
+  font-family: 'Hanna';
+  src: url("./../fonts/BMHANNAPro.ttf")
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin-left: 5.5rem;
+  margin-right: 5.5rem;
+}
+
+h1 {
+  font-size: 40px;
+  font-family: "Hanna";
+}
+
+a {
+  font-family: "NotoSansKR";
+  text-decoration: none;
+  color: black;
+  font-weight: normal;
+}
+
+textarea {
+  height: 300px;
+  font-size: 16px;
+  font-family: "NotoSansKR";
+}
+input::placeholder {
+  color: #868E96;
+  font-size: 50px;
+  font-family: "Hanna";
+  align-items: center;
+}
+textarea::placeholder {
+  font-family: "NotoSansKR";
+  color: #868E96;
+  font-size: 16px;
+}
+
+.text {
+  font-family: "NotoSansKR";
+  font-size: 16px;
+}
+
+.input_text {
+  font-family: "NotoSansKR";
+  font-size: 50px;
+}
+
+.border_none {
+  border: none;
+  outline: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.flex_col {
+  display: flex;
+  flex-direction: column;
+}
+
+.center {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex_row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.flex_between {
+  justify-content: space-between;
+}
+
+.form {
+  font-family: "NotoSansKR";
+  
+}
+
+.item {
+  font-family: "NotoSansKR";
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  flex-basis: 20%;
+  height: 300px;
+}
+.date {
+  font-size: 12px;
+  color: #868E96;
+}
+.mx_8 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.ellipsis {
+  width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.btn_write {
+  border: 1px solid;
+  border-radius: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  height: 2rem;
+}
+
+.btn {
+  font-family: "NotoSansKR";
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-size: 14px;
+  border-radius: 8px;
+  padding: 5px 10px 5px 10px;
+  cursor: pointer;
+  box-shadow: rgba(0, 9, 61, 0.2) 0px 4px 8px 0px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+.btn_blue {
+  background-color: #5087bd;
+}
+
+.btn_red {
+  background-color: #F40000;
+}
+
+.btn_green {
+  background-color: #12B886;
+}
+
+.font_green {
+  color: #12B886;
+}
+.w_half {
+  flex-basis: 50%;
+}
+
+.text_lg {
+  font-size: 1.125rem;
+}
+
+.a_write {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+}
+
+.title {
+  height: 66px;
+}
+
