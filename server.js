@@ -5,7 +5,7 @@ const articleRouter = require('./routes/articles');
 const methodOverride = require('method-override');
 const app = express();
 
-mongoose.connect('mongodb://127.0.0.1:27017/blog');
+mongoose.connect(`${process.env.MONGODB_URI}`);
 
 app.set('view engine', 'ejs');
 
@@ -21,4 +21,6 @@ app.get('/', async (req, res) => {
 });
 
 app.use('/articles', articleRouter);
-app.listen(5000);
+app.listen(process.env.PORT || 5000, function(){
+  console.log(`Express server listening on ${process.env.PORT}`,);
+});
