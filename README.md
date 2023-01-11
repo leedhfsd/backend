@@ -6,6 +6,3 @@ NoSQL 데이터베이스인 MongoDB와 Express를 이용한 백엔드 개발 프
 
 # 실행
 https://markdown-blog-crud.herokuapp.com/
-
-# 튜토리얼 출처
-#### https://www.youtube.com/watch?v=1NrHkjlWVhM
